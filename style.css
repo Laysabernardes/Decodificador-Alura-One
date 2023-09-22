@@ -1,0 +1,143 @@
+/* Estilos padrão */
+* {
+    background: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 8%;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area {
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+::placeholder { color: #0A3871; }
+.text-area:focus {
+    outline: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.mensagem {
+    background-color: white;
+    background-image: url("images/boneco.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: fixed;
+    width: 400px;
+    height: 800px;
+    top: 40px;
+    left: 900px;
+    z-index: 1; /* Elevar a mensagem */
+}
+
+.mensagem:focus {
+    outline: none;
+}
+.mensagem.sem-imagem {
+    background-image: none; /* Remove a imagem de fundo */
+    background-color: white; /* Define o fundo como branco */
+}
+
+.botoes {
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-desencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 15px;
+    width: 328px;
+    margin-top: 10px;
+    z-index: 2; /* Elevar os botões */
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    margin-top: 10px;
+    z-index: 2; /* Elevar os botões */
+}
+
+.btn-copiar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-top: 700px;
+    margin-left: 250px;
+    position: absolute;
+    width: 336px;
+    z-index: 2; /* Elevar os botões */
+}
+
+.informacao {
+    color: #495057;
+    font-size: 18px;
+    margin-top: 130px;
+    z-index: 2; /* Elevar a informação */
+}
+
+.texto1 {
+    color: black;
+    font-size: 18px;
+    padding: 0 30px;
+    position: relative;
+    z-index: 3; /* Elevar o texto1 */
+    background-color: white;
+    width: 300px;
+    height: auto;
+    margin-top: 550px;
+    margin-left: 250px;
+}
+
+.oculto {
+    display: none; /* Esconde o elemento */
+}
+
+
+
+
+
+
+
+
