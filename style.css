@@ -2,9 +2,8 @@
 * {
     background: #E5E5E5;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
+    font-size: 16px;
+    line-height: 100%;
 }
 
 .principal {
@@ -13,24 +12,32 @@
 }
 
 .logo {
-    margin-left: 10px;
-    padding-top: 10px;
-    width: 8%;
+    margin: 1%;
+    width: 6%;
 }
 
 main {
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    margin-bottom: 5%;
+    margin-left: 6%;
 }
 
 .text-area {
     border: none;
     color: #0A3871;
-    margin-top: 90px;
+    margin-top: 15%;
+    margin-bottom: 50%;
     text-transform: lowercase;
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+    resize: none;
 }
-::placeholder { color: #0A3871; }
+
+::placeholder {
+    color: #0A3871;
+}
+
 .text-area:focus {
     outline: none;
 }
@@ -46,55 +53,61 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     border: none;
-    border-radius: 24px;
+    border-radius: 2%;
     color: #0A3871;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
     position: fixed;
-    width: 400px;
-    height: 800px;
-    top: 40px;
-    left: 900px;
-    z-index: 1; /* Elevar a mensagem */
+    width: 45%;
+    height: 80%;
+    padding-bottom: 3%;
+    left: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .mensagem:focus {
     outline: none;
 }
+
 .mensagem.sem-imagem {
-    background-image: none; /* Remove a imagem de fundo */
-    background-color: white; /* Define o fundo como branco */
+    background-image: none;
+    background-color: white;
+    padding: 5%;
+    margin: 0 5% 0 0;
+    height: 60%;
+}
+
+.container-botao-informacao {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
 }
 
 .botoes {
     display: flex;
-    margin-top: 18px;
 }
 
 .btn-desencriptar {
     background: #D8DFE8;
-    border: 1px solid #0A3871;
+    border: 0.5% solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    height: 67px;
-    margin-left: 15px;
-    width: 328px;
-    margin-top: 10px;
-    z-index: 2; /* Elevar os botões */
+    height: 200%;
+    margin-left: 2%;
+    width: 50%;
+    margin-top: 1%;
 }
 
 .btn-encriptar {
     background-color: #0A3871;
-    border: 1px solid #0A3871;
+    border: 0.5% solid #0A3871;
     border-radius: 24px;
     color: white;
     cursor: pointer;
-    height: 67px;
-    width: 328px;
-    margin-top: 10px;
-    z-index: 2; /* Elevar os botões */
+    height: 200%;
+    width: 50%;
+    margin-top: 1%;
 }
 
 .btn-copiar {
@@ -102,42 +115,114 @@ section {
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    height: 67px;
-    margin-top: 700px;
-    margin-left: 250px;
-    position: absolute;
-    width: 336px;
-    z-index: 2; /* Elevar os botões */
+    width: 100%; 
+    height: 100%; 
+    z-index: 2;
+    margin: 5% 350%; 
 }
 
 .informacao {
     color: #495057;
     font-size: 18px;
-    margin-top: 130px;
-    z-index: 2; /* Elevar a informação */
+    text-align: center;
+    /* Elevar a informação */
 }
 
 .texto1 {
     color: black;
-    font-size: 18px;
-    padding: 0 30px;
+    font-size: 12px;
     position: relative;
-    z-index: 3; /* Elevar o texto1 */
     background-color: white;
-    width: 300px;
+    width: 100%;
     height: auto;
-    margin-top: 550px;
-    margin-left: 250px;
+    margin: 120% 0 0 110%;
 }
 
 .oculto {
-    display: none; /* Esconde o elemento */
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .mensagem {
+        width: 50%;
+        left: 45%;
+        height: 75%;
+    }
+
+    .btn-copiar {
+        width: 200%;
+        height: 100%;
+        padding: 5%;
+        margin: 10% auto;
+        left: 25%;
+        z-index: 2;
+    }
+
+    .texto1 {
+        margin: 0% auto;
+        left: 20%;
+    }
 }
 
 
+@media (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
 
+    .logo {
+        width: 15%;
+    }
 
+    .text-area {
+        width: 80%;
+        margin: 5%;
+    }
 
+    .informacao {
+        margin: 1% 0 4%;
+        font-size: 12px;
+        text-align: left;
+        padding-left: 5%;
+    }
 
+    .botoes {
+        margin: 3% 0 3% 0;
+    }
 
+    .mensagem {
+        width: 80%;
+        height: 70%;
+        padding-bottom: 3%;
+        left: 1%;
+        margin: 3% 2% 3% 10% ;
+        position: absolute;
+    }
 
+    .mensagem.sem-imagem {
+        padding: 5%;
+        margin: 5% 5% 0% 5%;
+        height: 50%;
+    }
+
+    .container-botao-informacao {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-top: 80%;
+    }
+    .informacao {
+        font-size: 12px;
+    }
+    
+    .texto1 {
+        font-size: 10px;
+        width: 80%;
+        left: 3%;
+        margin-top: 10%;
+    }
+    
+    .btn-copiar {
+        width: 80%;
+    }
+}
